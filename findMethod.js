@@ -7,4 +7,4 @@ const fruits = ['🍉', '🍊', '🍎', '🍓'];
 const watermelon = fruits.find(
   fruit => fruit === '🍉'
 );
-console.log(watermelon);
+console.log(watermelon); // 🍉
