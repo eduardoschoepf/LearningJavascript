@@ -10,4 +10,4 @@ const user = {
     skills:["Javascript", "Java", "Python"]
   }
   let {name, age} = user;
-  console.log(name, age);
+  console.log(`My name is ${name}, I am ${age} years old.`); // My name is John, I am 35 years old.
