@@ -3,12 +3,21 @@
 *** #javascript #developer #js #br 
 */
 
-var counter = () => {
-    var count = 0; // private
+const createCounter = () => {
+    let count = 0; // private
+  
     return {
-        increment: () => ++count,
-        decrement: ()  => --count
-    }
-}
-var newCounter = counter();
-console.log(newCounter.count, newCounter.increment(), newCounter.increment() ,newCounter.decrement()); // undefined 1 2 1
+      increment: () => ++count,
+      decrement: () => --count,
+      getCount: () => count,
+      reset: () => (count = 0),
+    };
+  };
+  
+const counter = createCounter();
+console.log(counter.count); // undefined
+console.log(counter.getCount()); // 0
+console.log(counter.increment()); // 1
+console.log(counter.increment()); // 2
+console.log(counter.decrement()); // 1
+console.log(counter.reset()); // 0
